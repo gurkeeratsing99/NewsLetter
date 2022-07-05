@@ -13,7 +13,7 @@ app.get("/" , function(req, res){
   res.sendFile(__dirname+"/signup.html");
 });
 
-app.listen(3000 || process.env.PORT , function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("The server is running at 3000 port")
 });
 
