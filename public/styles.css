@@ -12,6 +12,9 @@ body {
   background-color: #C2DED1;
   color: #354259;
 }
+.h3{
+  font-size: 3rem;
+}
 
 .form-signin {
   max-width: 400px;
@@ -26,7 +29,7 @@ body {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  
+
 }
 
 .bottom {
@@ -44,4 +47,16 @@ border-radius: 0;
 }
 .fw-normal{
   padding-top:30px;
+}
+
+#footBase{
+  color: #878787;
+  text-align: center;
+  padding-top: 20px;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+  tab-size: 20%;
+
+}
+#footBase:hover{
+  transform: rotateY(180deg);
 }
