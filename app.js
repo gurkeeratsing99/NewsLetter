@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+require('dotenv').config();
+console.log(process.env);
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -21,8 +23,9 @@ app.post("/", function(req , res){
   const firstName= req.body.firstName;
   const lastName= req.body.lastName;
   const email = req.body.email;
-  const key = "17cef1a4f099548aeda90cdb450ef898-us10";
-  const id = "469e229a40";
+  const key = process.env.API_KEY;
+  const id = process.env.ID;
+
 
   const data={
     members:[
