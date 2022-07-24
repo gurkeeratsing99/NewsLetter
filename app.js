@@ -39,7 +39,7 @@ app.post("/", function(req , res){
 
   var jData = JSON.stringify(data);
 
-  const url = " https://us10.api.mailchimp.com/3.0/lists/"+id;
+  const url = "https://us10.api.mailchimp.com/3.0/lists/"+id;
   const options = {
     method : "POST",
     auth: "gs:"+key
@@ -47,9 +47,11 @@ app.post("/", function(req , res){
   const request = https.request(url , options , function(response){
         if(response.statusCode === 200){
           res.sendFile(__dirname+"/success.html");
+          console.log(response.statusCode);
         }
         else{
           res.sendFile(__dirname+"/failure.html");
+          console.log(response.statusCode);
         }
     response.on("data", function(data){
     });
